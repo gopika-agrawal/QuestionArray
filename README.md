@@ -1,2 +1,2 @@
 # QuestionArray
-This is a array question repository
+This is an array question repository
