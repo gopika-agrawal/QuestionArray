@@ -1,0 +1,14 @@
+void reverse(int arr[] ,int start,int end){
+    while(start<=end){
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+    }
+}
+vector<int> rotateArray(vector<int>arr, int k) {
+    k = k%arr.size();
+    reverse(arr.begin(),arr.begin()+k);
+    reverse(arr.begin()+k,arr.end());
+    reverse(arr.begin(),arr.end());
+    return arr;
+}
