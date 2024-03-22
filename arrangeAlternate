@@ -1,0 +1,40 @@
+vector<int> alternateNumbers(vector<int>&a) {
+    /*vector<int> ans1;
+    for(int i=0;i<a.size();i++){
+        if(a[i]>0){
+            ans1.push_back(a[i]);
+        }
+    }
+    vector<int> ans2;
+    for(int i=0;i<a.size();i++){
+        if(a[i]<0){
+            ans2.push_back(a[i]);
+        }
+    }
+    vector<int> output1;
+    for(int i=0;i<a.size();i++){
+        output1.push_back(ans1[i]);
+        output1.push_back(ans2[i]);
+    }
+    vector<int> output2;
+    for(int i=0;i<a.size();i++){
+        output2.push_back(output1[i]);
+    }
+    return output2;
+    */
+    int negative = 1;
+    int positive = 0;
+    int n = a.size();
+    vector<int> ans(n,0);
+    for(int i=0;i<n;i++){
+        if(a[i]<0){
+            ans[negative] = a[i];
+            negative+=2;
+        }
+        else{
+            ans[positive] = a[i];
+            positive+=2;
+        }
+    }
+    return ans;
+}
